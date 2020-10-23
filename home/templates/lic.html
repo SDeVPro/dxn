@@ -1,0 +1,42 @@
+{% extends 'homebase.html'%}
+{% load static %}
+
+{% block title %} License{% endblock %}
+{% block description %} {% endblock %}
+{% block keywords %}  {% endblock %}
+
+{% block sidebar %}{% include 'sidebar.html' %} {% endblock %}
+
+{% block body %}
+
+    	<!-- BREADCRUMB -->
+	<div id="breadcrumb">
+		<div class="container">
+			<ul class="breadcrumb">
+				<li><a href="/">Home</a></li>
+				<li class="active">Posts</li>
+			</ul>
+		</div>
+	</div>
+	<!-- /BREADCRUMB -->
+    {% for rs in lic %}
+	<!-- section -->
+	<div class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+
+			<div class="row">
+
+                <img src="{{ rs.image.url }}"  style="height: 300px" alt="">
+			</div>
+            <a href="/lic/{{ rs.id }}/">{{ rs.title |safe }}</a>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /section -->
+    {% endfor %}
+
+ {% endblock %}
+{% block foot %}{% include 'footer.html' %} {% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'homebase.html'%}
+{% load static %}
+
+{% block title %} POSTS{% endblock %}
+{% block description %} {% endblock %}
+{% block keywords %}  {% endblock %}
+
+{% block sidebar %}{% include 'sidebar.html' %} {% endblock %}
+
+{% block body %}
+
+    	<!-- BREADCRUMB -->
+	<div id="breadcrumb">
+		<div class="container">
+			<ul class="breadcrumb">
+				<li><a href="/">Home</a></li>
+				<li class="active">Posts</li>
+			</ul>
+		</div>
+	</div>
+	<!-- /BREADCRUMB -->
+    {% for rs in post %}
+	<!-- section -->
+	<div class="section">
+		<!-- container -->
+		<div class="container">
+
+			<div class="row">
+
+                <img src="{{ rs.image.url }}"  style="height: 200px" alt="">
+			</div>
+            <a href="/post/{{ rs.id }}">Title:{{ rs.title }}</a>
+            <a href="/post/{{ rs.id }}">Description:{{ rs.description }}</a>
+            <a href="/post/{{ rs.id }}">Author:{{ rs.author }}</a>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /section -->
+    {% endfor %}
+
+ {% endblock %}
+{% block foot %}{% include 'footer.html' %} {% endblock %}
