@@ -11,7 +11,7 @@
     <div id="breadcrumb">
         <div class="container">
             <ul class="breadcrumb">
-                <li><a href="/">Home</a></li>
+                <li><a href="/">Asosiy</a></li>
                 <li><a href="/category/{{ product.category.id }}/{{ product.category.slug }}">{{ product.category.title }}</a></li>
                 <li><a href="#">{{ product.title }}</a></li>
 
@@ -65,7 +65,7 @@
                                     <i class="fa fa-star{% if product.avaregereview < 5%}-o empty{% endif%}"></i>
                                     {{ product.avaregereview |stringformat:".2f"}}
                                 </div>
-                                <a href="#tab1"> {{ product.countreview}}  Review(s) / Add Review</a>
+                                <a href="#tab1"> {{ product.countreview}}  Izohlar / Izoh qoldirish</a>
                             </div>
 
 
@@ -77,10 +77,10 @@
                             <form action="/order/addtoshopcart/{{ product.id }}" method="post">
                                 {% csrf_token %}
                                 <div class="qty-input">
-                                    <span class="text-uppercase">QTY: </span>
+                                    <span class="text-uppercase">Soni: </span>
                                     <input class="input" name="quantity" type="number" value="1" min="1" max="{{ product.amount }}">
                                 </div>
-                                <button type="submit" class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+                                <button type="submit" class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Sotib olish </button>
                             </form>
 
                             </div>
@@ -89,9 +89,9 @@
                     <div class="col-md-12">
                         <div class="product-tab">
                             <ul class="tab-nav">
-                                <li class="active"><a data-toggle="tab" href="#tab1">Details</a></li>
+                                <li class="active"><a data-toggle="tab" href="#tab1">Xususiyatlar</a></li>
 
-                                <li><a data-toggle="tab" href="#tab2">Reviews </a></li>
+                                <li><a data-toggle="tab" href="#tab2">Izohlar</a></li>
                             </ul>
                             <div class="tab-content">
                                 <div id="tab1" class="tab-pane fade in active">
@@ -134,7 +134,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-6">
-                                            <h4 class="text-uppercase">Write Your Review</h4>
+                                            <h4 class="text-uppercase">Izoh qoldirish</h4>
                                             {% if messages %}
                                                 {% for message in messages %}
                                                     <div class="alert alert-{{ message.tags }}" role="alert">
@@ -146,15 +146,15 @@
                                             <form class="review-form" action="/product/addcomment/{{ product.id }}" method="post">
                                                 {% csrf_token %}
                                                 <div class="form-group">
-                                                    <input name="subject" class="input" type="text" placeholder="Your Subject" />
+                                                    <input name="subject" class="input" type="text" placeholder="Izoh mavzusi" />
                                                 </div>
 
                                                 <div class="form-group">
-                                                    <textarea name="comment" class="input" placeholder="Your review"></textarea>
+                                                    <textarea name="comment" class="input" placeholder="Izoh qoldirish"></textarea>
                                                 </div>
                                                 <div class="form-group">
                                                     <div class="input-rating">
-                                                        <strong class="text-uppercase">Your Rating: </strong>
+                                                        <strong class="text-uppercase">Bxolash: </strong>
                                                         <div class="stars">
                                                             <input type="radio" id="star5" name="rate" value="5" /><label for="star5"></label>
                                                             <input type="radio" id="star4" name="rate" value="4" /><label for="star4"></label>
@@ -165,9 +165,9 @@
                                                     </div>
                                                 </div>
                                                 {% if user.id is not None  %}
-                                                    <button class="primary-btn">Submit</button>
+                                                    <button class="primary-btn">Yuklsh</button>
                                                 {% else %}
-                                                    You must be logged in to post a review
+                                                    Izoh qoldirish uchun saytga kiring
                                                 {% endif %}
                                             </form>
 

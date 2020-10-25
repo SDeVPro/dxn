@@ -1,6 +1,6 @@
 {% extends 'homebase.html'%}
 {% load static %}
-{% block title %} {{ query }} Results  {% endblock %}
+{% block title %} {{ query }} Natijalar  {% endblock %}
 {% block description %}  {{ category.description }}{% endblock %}
 {% block keywords %}  {{ category.keywords }}{% endblock %}
 
@@ -11,8 +11,8 @@
 	<div id="breadcrumb">
 		<div class="container">
 			<ul class="breadcrumb">
-				<li><a href="/">Home</a></li>
-				<li class="active">{{query}} Results </li>
+				<li><a href="/">Asosiy</a></li>
+				<li class="active">{{query}} Natijalar </li>
 			</ul>
 		</div>
 	</div>
@@ -38,15 +38,15 @@
                         	<div class="col-md-12">
 						<div class="order-summary clearfix">
 							<div class="section-title">
-								<h3 class="title">Product List</h3>
+								<h3 class="title">Mahsulotlat Ro'yxati</h3>
 							</div>
 							<table class="shopping-cart-table table">
 								<thead>
 									<tr>
-										<th>Product</th>
+										<th>Mahsulot</th>
 										<th></th>
-										<th class="text-center">Price</th>
-										<th class="text-center">Quantity</th>
+										<th class="text-center">Narxi</th>
+										<th class="text-center">Soni</th>
 
 										<th class="text-right"></th>
 									</tr>
@@ -62,7 +62,7 @@
 										<td class="price text-center"><strong>{{rs.price}}so'm</strong><br></td>
 										<td class="qty text-center"><input class="input" type="number" value="1"></td>
 
-										<td class="text-right"><a href="/order/addtoshopcart/{{ rs.id }}" class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</a></td>
+										<td class="text-right"><a href="/order/addtoshopcart/{{ rs.id }}" class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Sotib olish</a></td>
 									</tr>
                                 {% endfor %}
 
