@@ -1,46 +1,46 @@
-{% load static %}
+    {% load static %}
 
 
-<!-- NAVIGATION -->
-	<div id="navigation">
-		<!-- container -->
-		<div class="container">
-			<div id="responsive-nav">
-				<!-- category nav -->
-                {% if page %}
-				    <div class="category-nav">
-				{% else %}
-                    <div class="category-nav show-on-click">
-                {% endif %}
-					<span class="category-header">Categories <i class="fa fa-list"></i></span>
+    <!-- NAVIGATION -->
+        <div id="navigation">
+            <!-- container -->
+            <div class="container">
+                <div id="responsive-nav">
+                    <!-- category nav -->
+                    {% if page %}
+                        <div class="category-nav">
+                    {% else %}
+                        <div class="category-nav show-on-click">
+                    {% endif %}
+                        <span class="category-header">Categories <i class="fa fa-list"></i></span>
 
-                <ul class="category-list">
-                    {% for rs in category %}
-						<li class="dropdown side-dropdown">
-							<a href="/category/{{ rs.id }}/{{ rs.slug }}" >  {{ rs.title }} <i class="fa fa-angle-right"></i></a>
+                    <ul class="category-list">
+                        {% for rs in category %}
+                            <li class="dropdown side-dropdown">
+                                <a href="/category/{{ rs.id }}/{{ rs.slug }}" >  {{ rs.title }} <i class="fa fa-angle-right"></i></a>
 
-						</li>
-                    {% endfor %}
+                            </li>
+                        {% endfor %}
 
-					</ul>
-				</div>
-				<!-- /category nav -->
+                        </ul>
+                    </div>
+                    <!-- /category nav -->
 
-				<!-- menu nav -->
-				<div class="menu-nav">
-					<span class="menu-header">Menu <i class="fa fa-bars"></i></span>
-					<ul class="menu-list">
-						<li><a href="/">Home</a></li>
-						<li><a href="/about">About Us</a></li>
-                        <li><a href="/post">Posts</a></li>
-						<li><a href="/lic">License</a></li>
-						<li><a href="/contact">Contact</a></li>
+                    <!-- menu nav -->
+                    <div class="menu-nav">
+                        <span class="menu-header">Menu <i class="fa fa-bars"></i></span>
+                        <ul class="menu-list">
+                            <li><a href="/">Asosiy</a></li>
+                            <li><a href="/about">Biz haqimizda</a></li>
+                            <li><a href="/post">Yangiliklar</a></li>
+                            <li><a href="/lic">Litsenziyalar</a></li>
+                            <li><a href="/contact">Bog'lanish</a></li>
 
-					</ul>
-				</div>
-				<!-- menu nav -->
-			</div>
-		</div>
-		<!-- /container -->
-	</div>
-	<!-- /NAVIGATION -->
+                        </ul>
+                    </div>
+                    <!-- menu nav -->
+                </div>
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /NAVIGATION -->

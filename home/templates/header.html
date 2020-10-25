@@ -5,7 +5,7 @@
 		<div id="top-header">
 			<div class="container">
 				<div class="pull-left">
-					<span>DXN!</span>
+
                     {% if messages %}
                         {% for message in messages %}
                             <div class="alert alert-{{ message.tags }}" role="alert">
@@ -16,25 +16,19 @@
 				</div>
 				<div class="pull-right">
 					<ul class="header-top-links">
-						<li><a href="#">Store</a></li>
-						<li><a href="#">Newsletter</a></li>
-						<li><a href="#">FAQ</a></li>
+
+						<li><a href="/contact">Xat yuborish</a></li>
+						<li><a href="/faq">KBS</a></li>
 						<li class="dropdown default-dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">ENG <i class="fa fa-caret-down"></i></a>
 							<ul class="custom-menu">
 								<li><a href="#">English (ENG)</a></li>
 								<li><a href="#">Russian (Ru)</a></li>
-								<li><a href="#">French (FR)</a></li>
-								<li><a href="#">Spanish (Es)</a></li>
+                                <li><a href="#">O'zbekcha (O'z)</a></li>
+
 							</ul>
 						</li>
-						<li class="dropdown default-dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">USD <i class="fa fa-caret-down"></i></a>
-							<ul class="custom-menu">
-								<li><a href="#">USD ($)</a></li>
-								<li><a href="#">EUR (€)</a></li>
-							</ul>
-						</li>
+
 					</ul>
 				</div>
 			</div>
@@ -76,7 +70,7 @@
                             {% csrf_token %}
 							<input id="query" name="query" class="input search-input" type="text" placeholder="Enter your keyword">
 							<select name="catid" class="input search-categories">
-								<option value="0">All Categories</option>
+								<option value="0">Mahsulot turlari</option>
 
                                 {% for rs in category %}
                                     {% if rs.is_leaf_node %}
@@ -123,7 +117,7 @@
 						<li class="header-cart dropdown default-dropdown">
 							<a href="/shopcart/"><i class="fa fa-shopping-cart"></i>
 
-								<strong class="text-uppercase">My Cart:</strong>
+								<strong class="text-uppercase">Mening xaridim:</strong>
 								<br>
 								<span>{{ total }}</span>
 							</a>

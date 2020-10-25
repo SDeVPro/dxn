@@ -1,5 +1,7 @@
 from django.contrib import admin
-from .models import Setting,  ContactMessage, Post, Images, License
+from .models import Setting, ContactMessage, Post, Images, License, FAQ
+
+
 # Register your models here.
 
 class PostAdmin(admin.ModelAdmin):
@@ -21,6 +23,12 @@ class ContactMessageAdmin(admin.ModelAdmin):
     readonly_fields = ('name','subject', 'email', 'message','ip')
     list_filter = ['status']
 
+class FAQAdmin(admin.ModelAdmin):
+    list_display = ['question', 'answer', 'ordernumber', 'status']
+    list_filter = ['status']
+
+
+admin.site.register(FAQ, FAQAdmin)
 admin.site.register(Post, PostAdmin)
 admin.site.register(License, LicenseAdmin)
 admin.site.register(Setting, SettingAdmin)

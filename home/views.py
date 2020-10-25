@@ -124,13 +124,15 @@ def product_detail(request, id, slug):
 
 
 def post(request):
+    category = Category.objects.all()
     post = Post.objects.all()
-    return render(request, 'post.html', {'post':post})
+    return render(request, 'post.html', {'post':post,'category':category})
 
 
 def lic(request):
+    category = Category.objects.all()
     lic = License.objects.all()
-    return render(request, 'lic.html', {'lic':lic})
+    return render(request, 'lic.html', {'lic':lic,'category':category})
 
 
 def post_detail(request,id):
