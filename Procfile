@@ -1,0 +1,1 @@
+web: gunicorn dxn.wsgi --log-file -
