@@ -25,7 +25,7 @@ SECRET_KEY = '^wiln+&%6+cwt5jxa_aj8!nsos03nr$0i8$)44jw#3*rirxb$@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['dxn2u.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['bigbromarket.herokuapp.com/','127.0.0.1']
 
 
 # Application definition
